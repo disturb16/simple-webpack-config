@@ -17,4 +17,5 @@ here you only have to especify it with a json format
 {
   input: "path-to-source-file",
   output: "path-to-compiled-file
-}```
+}
+```
