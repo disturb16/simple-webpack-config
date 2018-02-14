@@ -2,7 +2,6 @@ const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const files = require('./webpack-files');
 const mode = process.argv.slice(2)
-console.log(mode)
 var configurations = []
 
 var config = {
@@ -33,7 +32,7 @@ for(let i=0; i < files.length; i++){
         'vue$': 'vue/dist/vue.esm.js'
       }
     },
-    plugins: mode === '--debug'? [] : [new UglifyJSPlugin()]
+    plugins: mode == '--debug'? [] : [new UglifyJSPlugin()]
   });
   configurations.push(conf)
 }
